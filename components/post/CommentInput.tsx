@@ -23,7 +23,7 @@ export default function CommentInput({ postId }: Props) {
   return (
     <form onSubmit={handleSubmit} className="flex items-center gap-2 px-4 pb-3">
       <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full">
-        <Image src={currentUser.avatar} alt={currentUser.name} fill className="object-cover" />
+        <Image src={currentUser.avatar} alt={currentUser.name} fill sizes="32px" className="object-cover" />
       </div>
       <div className="flex flex-1 items-center gap-2 rounded-full bg-[#3A3B3C] px-4 py-2">
         <input

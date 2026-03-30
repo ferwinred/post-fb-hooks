@@ -15,6 +15,7 @@ export default function PostContent({ post }: Props) {
             src={post.image}
             alt="Post image"
             fill
+            priority
             className="object-cover"
             sizes="(max-width: 680px) 100vw, 680px"
           />

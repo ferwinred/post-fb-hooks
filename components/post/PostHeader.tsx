@@ -34,7 +34,7 @@ export default function PostHeader({ post }: Props) {
       <div className="flex items-center gap-3">
         <Link href={`/profile/${post.user.id}`}>
           <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-[#3A3B3C] hover:ring-[#1877F2] transition-all">
-            <Image src={post.user.avatar} alt={post.user.name} fill className="object-cover" />
+            <Image src={post.user.avatar} alt={post.user.name} fill sizes="40px" className="object-cover" />
           </div>
         </Link>
         <div>

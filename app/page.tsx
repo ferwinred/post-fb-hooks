@@ -51,7 +51,7 @@ export default function Page() {
           </button>
           <Link href={`/profile/${user.id}`}>
             <div className="relative h-9 w-9 overflow-hidden rounded-full ring-2 ring-[#3A3B3C] hover:ring-[#1877F2] transition-all">
-              <Image src={user.avatar} alt={user.name} fill className="object-cover" />
+              <Image src={user.avatar} alt={user.name} fill sizes="40px" className="object-cover" />
             </div>
           </Link>
         </div>

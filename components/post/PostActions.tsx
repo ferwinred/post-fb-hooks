@@ -27,7 +27,7 @@ interface Props {
 }
 
 export default function PostActions({ post, onCommentClick }: Props) {
-  const { toggleLike } = useFeed();
+  const { toggleLike, sharePost } = useFeed();
   const [showReactions, setShowReactions] = useState(false);
   const [copied, setCopied] = useState(false);
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -75,7 +75,7 @@ export default function PostActions({ post, onCommentClick }: Props) {
           onMouseUp={handleLikeMouseUp}
           onMouseLeave={() => holdTimer.current && clearTimeout(holdTimer.current)}
           className={cn(
-            "flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium transition-colors hover:bg-[#3A3B3C]",
+            "flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium transition-colors hover:cursor-pointer hover:bg-[#3A3B3C]",
             post.liked ? (currentReaction?.color ?? "text-[#1877F2]") : "text-[#B0B3B8]"
           )}
         >
@@ -89,7 +89,7 @@ export default function PostActions({ post, onCommentClick }: Props) {
 
         <button
           onClick={onCommentClick}
-          className="flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium text-[#B0B3B8] transition-colors hover:bg-[#3A3B3C]"
+          className="flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium text-[#B0B3B8] transition-colors hover:cursor-pointer hover:bg-[#3A3B3C]"
         >
           <MessageCircle size={18} />
           <span>Comentar</span>
@@ -97,13 +97,13 @@ export default function PostActions({ post, onCommentClick }: Props) {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium text-[#B0B3B8] transition-colors hover:bg-[#3A3B3C]">
+            <button className="flex flex-1 items-center justify-center gap-2 rounded-md py-2 text-sm font-medium text-[#B0B3B8] transition-colors hover:cursor-pointer hover:bg-[#3A3B3C]">
               <Share2 size={18} />
               <span>Compartir</span>
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => sharePost(post.id)}>
               <Share2 size={16} />
               Compartir en el feed
             </DropdownMenuItem>

@@ -21,7 +21,7 @@ export default function PostStats({ post, onToggleComments }: Props) {
       {post.likes > 0 && (
         <Dialog>
           <DialogTrigger asChild>
-            <button className="flex items-center gap-1 hover:underline">
+            <button className="flex items-center gap-1 hover:cursor-pointer hover:underline">
               <span className="flex -space-x-1">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1877F2] text-xs">👍</span>
               </span>
@@ -37,7 +37,7 @@ export default function PostStats({ post, onToggleComments }: Props) {
             <div className="space-y-3">
               {mockUsers.slice(0, post.likes).map((user) => (
                 <div key={user.id} className="flex items-center gap-3">
-                  <img src={user.avatar} alt={user.name} className="h-9 w-9 rounded-full" />
+                  <img src={user.avatar} alt={user.name} className="h-10 w-10 rounded-full object-cover" />
                   <span className="text-sm text-[#E4E6EB]">{user.name}</span>
                   <span className="ml-auto">{REACTION_EMOJIS["like"]}</span>
                 </div>
@@ -52,7 +52,7 @@ export default function PostStats({ post, onToggleComments }: Props) {
 
       <div className="ml-auto flex items-center gap-3">
         {post.comments.length > 0 && (
-          <button onClick={onToggleComments} className="hover:underline">
+          <button onClick={onToggleComments} className="hover:underline hover:cursor-pointer">
             {post.comments.length} comentario{post.comments.length !== 1 ? "s" : ""}
           </button>
         )}

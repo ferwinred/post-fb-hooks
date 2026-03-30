@@ -10,6 +10,9 @@ export interface Comment {
   user: User;
   text: string;
   createdAt: string;
+  likes: number;
+  likedByMe: boolean;
+  replies: Comment[];
 }
 
 export interface Reaction {

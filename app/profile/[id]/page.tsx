@@ -58,7 +58,7 @@ export default function ProfilePage() {
       <div className="mx-auto max-w-[860px] px-4">
         <div className="relative -mt-16 mb-4 flex flex-col items-center md:flex-row md:items-end md:gap-4">
           <div className="relative h-32 w-32 overflow-hidden rounded-full ring-4 ring-[#18191A]">
-            <Image src={user.avatar} alt={user.name} fill className="object-cover" />
+            <Image src={user.avatar} alt={user.name} fill sizes="128px" className="object-cover" />
           </div>
           <div className="mt-3 flex flex-1 flex-col items-center md:items-start md:pb-2">
             <h1 className="text-2xl font-bold text-[#E4E6EB]">{user.name}</h1>
@@ -116,7 +116,7 @@ export default function ProfilePage() {
                 {mockUsers.filter((u) => u.id !== userId).map((friend) => (
                   <Link key={friend.id} href={`/profile/${friend.id}`} className="group">
                     <div className="relative aspect-square overflow-hidden rounded-lg">
-                      <Image src={friend.avatar} alt={friend.name} fill className="object-cover group-hover:opacity-80 transition-opacity" />
+                      <Image src={friend.avatar} alt={friend.name} fill sizes="80px" className="object-cover group-hover:opacity-80 transition-opacity" />
                     </div>
                     <p className="mt-1 text-xs text-[#B0B3B8] truncate">{friend.name.split(" ")[0]}</p>
                   </Link>

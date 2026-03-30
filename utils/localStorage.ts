@@ -4,7 +4,7 @@ const POSTS_KEY = "fb_posts";
 const SAVED_KEY = "fb_saved_posts";
 
 export const mockUsers = [
-  { id: "1", name: "María García", avatar: "https://i.pravatar.cc/150?img=47", username: "maria.garcia" },
+  { id: "1", name: "Fernando Arias", avatar: "/images/perfil.jpeg", username: "fernando.arias" },
   { id: "2", name: "Carlos López", avatar: "https://i.pravatar.cc/150?img=12", username: "carlos.lopez" },
   { id: "3", name: "Ana Martínez", avatar: "https://i.pravatar.cc/150?img=32", username: "ana.martinez" },
 ];
@@ -18,8 +18,8 @@ export const initialPosts: Post[] = [
     likes: 142,
     liked: false,
     comments: [
-      { id: "c1", user: mockUsers[1], text: "¡Felicidades! React hooks son increíbles 🎉", createdAt: "2024-01-15T10:30:00Z" },
-      { id: "c2", user: mockUsers[2], text: "¿Qué proyecto fue? Me encantaría verlo", createdAt: "2024-01-15T11:00:00Z" },
+      { id: "c1", user: mockUsers[1], text: "¡Felicidades! React hooks son increíbles 🎉", createdAt: "2024-01-15T10:30:00Z", likes: 3, likedByMe: false, replies: [] },
+      { id: "c2", user: mockUsers[2], text: "¿Qué proyecto fue? Me encantaría verlo", createdAt: "2024-01-15T11:00:00Z", likes: 0, likedByMe: false, replies: [] },
     ],
     shares: 23,
     saved: false,
@@ -33,7 +33,7 @@ export const initialPosts: Post[] = [
     likes: 89,
     liked: false,
     comments: [
-      { id: "c3", user: mockUsers[0], text: "Jajaja yo siempre así 😂", createdAt: "2024-01-14T22:00:00Z" },
+      { id: "c3", user: mockUsers[0], text: "Jajaja yo siempre así 😂", createdAt: "2024-01-14T22:00:00Z", likes: 1, likedByMe: false, replies: [] },
     ],
     shares: 15,
     saved: false,

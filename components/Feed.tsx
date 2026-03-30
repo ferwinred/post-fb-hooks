@@ -53,7 +53,7 @@ export default function Feed() {
         <form onSubmit={handleCreatePost}>
           <div className="flex items-center gap-3 mb-3">
             <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
-              <Image src={currentUser.avatar} alt={currentUser.name} fill className="object-cover" />
+              <Image src={currentUser.avatar} alt={currentUser.name} fill sizes="40px" className="object-cover" />
             </div>
             <input
               value={newPostText}

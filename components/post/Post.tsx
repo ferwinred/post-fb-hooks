@@ -26,7 +26,7 @@ export default function Post({ post }: Props) {
       <PostActions post={post} onCommentClick={() => setShowComments((v) => !v)} />
       {showComments && (
         <>
-          <CommentList comments={post.comments} />
+          <CommentList comments={post.comments} postId={post.id} />
           <CommentInput postId={post.id} />
         </>
       )}
