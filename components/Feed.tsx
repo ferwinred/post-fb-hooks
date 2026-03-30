@@ -64,15 +64,15 @@ export default function Feed() {
           </div>
           <div className="flex items-center justify-between border-t border-[#3A3B3C] pt-3">
             <div className="flex gap-1">
-              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] transition-colors">
+              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] hover:cursor-pointer transition-colors">
                 <Video size={18} className="text-red-500" />
                 <span className="hidden sm:inline">Video en vivo</span>
               </button>
-              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] transition-colors">
+              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] hover:cursor-pointer transition-colors">
                 <ImageIcon size={18} className="text-green-500" />
                 <span className="hidden sm:inline">Foto/video</span>
               </button>
-              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] transition-colors">
+              <button type="button" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#B0B3B8] hover:bg-[#3A3B3C] hover:cursor-pointer transition-colors">
                 <Smile size={18} className="text-yellow-400" />
                 <span className="hidden sm:inline">Sentimiento</span>
               </button>
